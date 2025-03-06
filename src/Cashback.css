@@ -1,0 +1,87 @@
+/* Full-screen background overlay */
+.cashback-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0); /* Dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+/* Cashback Heading */
+.cashback-heading {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Cashback Form Container */
+.cashback-form {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent form */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px); /* Glass effect */
+  width: 350px;
+  text-align: center;
+}
+
+/* Label Styling */
+.cashback-label {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Input Fields */
+.cashback-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(10, 10, 10, 0.2);
+  color: white;
+  outline: none;
+}
+
+/* Input Placeholder Styling */
+.cashback-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button Styling */
+.cashback-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6b6b, #f94c66);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.cashback-button:hover {
+  background: linear-gradient(45deg, #f94c66, #ff4f4f);
+}
+
+/* Success and Error Messages */
+.cashback-alert {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .cashback-form {
+    width: 90%;
+  }
+}

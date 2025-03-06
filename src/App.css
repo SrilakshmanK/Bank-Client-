@@ -1,0 +1,159 @@
+/* 🔥 Full-Screen Black Background */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* 🎥 Video Background */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  filter: grayscale(100%);
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* 🖤 Dark Overlay for Better Contrast */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  animation: overlayFade 2s ease-in-out;
+}
+
+/* 📌 Content Positioning */
+.content {
+  position: relative;
+  z-index: 1;
+  padding-top: 80px;
+  text-align: center;
+  color: white;
+  animation: slideUp 1s ease-in-out;
+}
+
+/* 🖥 Navbar Styling */
+.navbar {
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  transition: background-color 0.3s ease-in-out;
+  padding: 12px 20px;
+}
+
+/* Navbar Hover Effect */
+.navbar:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 🌐 Navbar Links */
+.nav-link {
+  color: white !important;
+  transition: color 0.3s ease-in-out;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.nav-link:hover {
+  color: gray !important;
+}
+
+/* 🏦 Logo Styling */
+.navbar-brand img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect - Moves Slightly Up */
+.navbar-brand img:hover {
+  transform: translateY(-8px);
+}
+
+/* ⏫ Bounce Animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.bounce {
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+/* 📱 Full Responsive Design */
+@media (max-width: 1024px) { /* Tablets */
+  .content {
+    padding-top: 70px;
+    font-size: 16px;
+  }
+  .navbar {
+    padding: 10px;
+  }
+  .nav-link {
+    font-size: 15px;
+    padding: 8px;
+  }
+  .navbar-brand img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) { /* Mobile Devices */
+  .content {
+    padding-top: 60px;
+    font-size: 14px;
+  }
+  .navbar {
+    padding: 8px;
+  }
+  .nav-link {
+    font-size: 14px;
+    padding: 6px;
+  }
+  .navbar-brand img {
+    width: 90px;
+  }
+  .background-video {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 480px) { /* Small Mobile Devices */
+  .content {
+    font-size: 13px;
+    padding-top: 50px;
+  }
+  .navbar {
+    padding: 6px;
+  }
+  .nav-link {
+    font-size: 13px;
+  }
+  .navbar-brand img {
+    width: 80px;
+  }
+}

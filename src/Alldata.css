@@ -1,0 +1,181 @@
+/* 🔥 Full-Screen Black Background */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black !important; /* Ensure full black */
+  color: white;
+  overflow-x: hidden;
+}
+
+/* 🌎 Full-Page Container */
+.alldata-container {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* 📝 Responsive Table Styling */
+.alldata-table {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.05); /* Slightly visible */
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 📱 Make Table Scrollable on Small Screens */
+.alldata-container {
+  overflow-x: auto; /* Enable horizontal scroll */
+}
+
+.alldata-table th, .alldata-table td {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.alldata-table th {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.alldata-table td {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ✨ Buttons */
+.edit-button, .delete-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.edit-button:hover, .delete-button:hover {
+  transform: scale(1.05);
+}
+
+.edit-button {
+  background: #fbc02d;
+}
+
+.delete-button {
+  background: #d32f2f;
+}
+
+/* ⚡ Full-Black Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9); /* Slight transparency for better contrast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* 🔲 Modal Box */
+.modal-content {
+  background: rgba(255, 255, 255, 0.1); /* Slightly visible */
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px; /* Default modal size */
+  max-width: 90%; /* Prevents modal from being too big */
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* 🏷 Modal Text */
+.modal-content h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* 📌 Modal Inputs */
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* 🔘 Update & Cancel Buttons */
+.update-button, .cancel-button {
+  width: 100%;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.update-button {
+  background: #28a745;
+}
+
+.cancel-button {
+  background: #dc3545;
+  margin-top: 10px;
+}
+
+.update-button:hover, .cancel-button:hover {
+  opacity: 0.8;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .alldata-container {
+    padding: 10px;
+  }
+
+  .alldata-table {
+    font-size: 14px; /* Smaller font for smaller screens */
+  }
+
+  .edit-button, .delete-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .modal-content {
+    width: 80%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .modal-content h2 {
+    font-size: 18px;
+  }
+
+  .modal-content input {
+    padding: 10px;
+  }
+
+  .update-button, .cancel-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
